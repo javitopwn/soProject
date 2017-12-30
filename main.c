@@ -23,8 +23,8 @@ return quantum;
 int nprocesos(char *res, FILE *fich){
 int nprocesos;
 char cadena[100], formato[8]="nproces", auxformat[100];
-fscanf(fich,"d\n", &nprocesos);
-//printf("%s\n%s\n%d\n",auxformat, formato,nprocesos);
+fscanf(fich,"%[a-z0-9]:d\n", auxformat, &nprocesos);
+//printf("%s\n%s\n%d\n",auxformat, formato,nprocesos); //Esto es solo para probar porque las ptas cadenas no coinciden
 if (nprocesos==0/*||strcmp(formato,auxformat)*/) printf("El formato de nprocesos es incorrecto. Escribalo con el siguiente formato: nprocesos:n \n");
 else {
 printf("El nprocesos es es %d\n",nprocesos);
